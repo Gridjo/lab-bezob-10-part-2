@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	A:
+	<input type="text" class="A" name="color"><br>
+	B:
+	<input type="text" class="B" name="color"><br>
+	P:
+	<input type="text" class="P" name="color"><br>
+	X:
+	<input type="text" class="X" name="color"><br>
+	<input type="button" name="color_ok" value="ok" onclick="shifr()"><br>
+
+	Result:
+	<input type="text" class="res" name="color"><br>
+<script>
+	function shifr() {
+		var a = document.querySelector(".A").value;
+		var b = document.querySelector(".B").value;
+		var p = document.querySelector(".P").value;
+		var x = document.querySelector(".X").value;
+		var ras = (b*a**(p-1-x))-p*	Math.floor((b*a**(p-1-x))/p);
+		document.querySelector(".res").value = ras;
+	}
+	
+</script>
+</body>
+</html>
